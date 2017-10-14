@@ -9,36 +9,30 @@ var port = 8080;
 var url =
   "https://denver.craigslist.org/search/sss?query=subaru&sort=rel&min_price=500&max_price=1500";
 
-var cars = [];
-var carObject = {
-  carModel: "djkfals;dfk",
-  postDate: "",
-  carPrice: "",
-  carLocation: "",
-  postHref: ""
-};
+var cars = []
+Object.create()
 
-// carObject[0].carModel = "subaru";
-console.log("dkfasldj", jsonObject[0].carModel);
+
 
 function doRequest(url) {
   request(url, function(err, res, body) {
     if (err) {
-      console.error("Here is what went wrong", err);
+      console.error("Here is what went wrong ", err);
     } else {
       // Load the html body
       var $ = cheerio.load(body);
       // Get the car descriptions
-      var carModel = [];
-      $(".result-title").each(function(i) {
-        // console.log(jsonObject.carModel);
-        // console.log(i);
-        let car = $(this).text();
-        carObject[i];
+      // var carModel = [];
+      // $(".result-title").each(function(i) {
+      //   // console.log(jsonObject.carModel);
+      //   // console.log(i);
+      //   let car = $(this).text();
+      //   cars[i] = new carObject;
 
         // jsonObject[i][carModel] = carModel;
+      }
       });
-      console.log(jsonObject);
+
 
       // Get the dates for each result
       // var postDate = [];
